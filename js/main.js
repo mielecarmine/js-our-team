@@ -33,23 +33,19 @@ const team = [
 
 // MILESTONE 1-2
 
-const containerElement = document.getElementById("container");
+const row = document.getElementById("row");
 
 for (let persona of team) {
-  console.log(persona.name, persona.role, persona.image);
-
-  const cardElement = document.createElement("div");
-  cardElement.classList.add("card");
-  cardElement.innerHTML =
-    "<p>" +
-    persona.name +
-    "" +
-    persona.role +
-    "" +
-    "" +
-    "" +
-    persona.image +
-    "<p>";
-  cardElement.innerHTML = `<img src="./img/${persona.image}" class="slide" alt=""></img>`;
-  containerElement.append(cardElement);
+  const containerCard = `
+    <div class="col">
+          <div class="card">
+            <img src="./img/${persona.image}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">${persona.name}</h5>
+              <p class="card-text">${persona.role}</p>
+            </div>
+          </div>
+        </div>
+    `;
+  row.innerHTML += containerCard;
 }
