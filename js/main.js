@@ -40,7 +40,7 @@ for (let persona of team) {
     <div class="col">
           <div class="card">
             <img src="./img/${persona.image}" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body text-center">
               <h5 class="card-title">${persona.name}</h5>
               <p class="card-text">${persona.role}</p>
             </div>
